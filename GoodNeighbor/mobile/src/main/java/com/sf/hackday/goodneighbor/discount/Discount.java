@@ -8,12 +8,22 @@ public class Discount {
     int id;
     double discountAmount;
 
+    public Discount() {
+        super();
+        this.discountAmount = 0;
+    }
+
     public double getDiscountAmount() {
         return discountAmount;
     }
 
     public void setDiscountAmount(double discountAmount) {
-        this.discountAmount = discountAmount;
+        if (discountAmount > 1) {
+            this.discountAmount = 1;
+        }
+        if (discountAmount > 0){
+            this.discountAmount = discountAmount;
+        }
     }
 
     public void setId(int id) {
