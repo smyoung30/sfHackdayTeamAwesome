@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "527787635694",
+    "project_id": "goodneighbor-7b8b9"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527787635694:android:8942a9660f387ebd",
+        "android_client_info": {
+          "package_name": "com.sf.hackday.goodneighbor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBb2O_0q7sfIk7Vm9HtVUV203sOPsRmCmA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
