@@ -40,9 +40,9 @@
         <activity
             android:name=".activities.MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".activities.PolicyActivity"></activity>
         <activity android:name=".activities.LoginActivity" android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".activities.DashboardActivity"></activity>
+        <activity android:name=".activities.DiscountsActivity"></activity>
     </application>
 
 </manifest>

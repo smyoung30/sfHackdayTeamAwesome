@@ -7,8 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
+
 import com.sf.hackday.goodneighbor.R;
 import com.sf.hackday.goodneighbor.presenters.GoodNeighborPresenter;
 import com.sf.hackday.goodneighbor.views.ClickListener;
@@ -62,8 +61,8 @@ public class DashboardActivity extends AppCompatActivity {
      *
      * @param v view
      */
-    public void gotoPolicyActivity(View v) {
-        Intent intent = new Intent(this, PolicyActivity.class);
+    public void gotoDiscountsActivity(View v) {
+        Intent intent = new Intent(this, DiscountsActivity.class);
         startActivity(intent);
     }
 
