@@ -6,18 +6,17 @@ package com.sf.hackday.goodneighbor.discount;
 public class DiscountDisplay {
 
     Discount discount;
+    Discount discount2;
     DisplayIcon icon;
 
     public Discount getDiscount() {
         return discount;
     }
-
-    public void setDiscount(Discount discount) {
-        this.discount = discount;
-    }
-
     public void setIcon(DisplayIcon icon) {
         this.icon = icon;
+    }
+    public void setDiscount(Discount discount) {
+        this.discount = discount;
     }
 
     public DisplayIcon getIcon() {
