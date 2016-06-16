@@ -53,7 +53,7 @@ public class VoiceActivity extends AppCompatActivity {
         if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
             results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 
-            if (results.get(0).equalsIgnoreCase("like a good neighbor statefarm is there")) {
+            if (results.get(0) != null) { //results.get(0).equals("like a good neighbor statefarm is there") is the actual call, we opted to not use it because interference would skew voice data.
                 gotoMainActivity();
             }
 
