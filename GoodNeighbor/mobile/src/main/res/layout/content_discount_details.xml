@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.DiscountDetailsActivity"
+    tools:showIn="@layout/activity_discount_details">
+
+    <TextView
+        android:id="@+id/discountName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:text="Discount Name"/>
+
+    <TextView
+        android:id="@+id/discountDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Discount Discription"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/discountName"
+        />
+    <TextView
+        android:id="@+id/checklist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Discount Checklist"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="72dp"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/discountDesc"/>
+
+    <LinearLayout
+        android:id="@+id/discountListItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/checklist">
+
+        <ImageView
+            android:id="@+id/checkmark1"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/green_checkmark"
+            />
+        <TextView
+            android:id="@+id/discountItem1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="No claims for the past 12 months"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/discountListItems2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/discountListItems">
+
+        <ImageView
+            android:id="@+id/checkmark2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/green_checkmark"
+            />
+        <TextView
+            android:id="@+id/discountItem2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="Remain in the same city since starting the policy"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/discountListItems3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/discountListItems2">
+
+        <ImageView
+            android:id="@+id/checkmark3"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/close_x_thin_red"
+            />
+        <TextView
+            android:id="@+id/discountItem3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="Take out $50 for your new born child every year for the next 10 years"/>
+    </LinearLayout>
+
+</RelativeLayout>
