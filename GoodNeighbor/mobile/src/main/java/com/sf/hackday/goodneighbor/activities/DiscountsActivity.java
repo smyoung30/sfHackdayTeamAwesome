@@ -1,5 +1,6 @@
 package com.sf.hackday.goodneighbor.activities;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,8 +11,13 @@ import com.sf.hackday.goodneighbor.adapter.DiscountArrayAdapter;
 import android.widget.ListView;
 
 import com.sf.hackday.goodneighbor.R;
+import com.sf.hackday.goodneighbor.discount.DiscountDisplay;
+import com.sf.hackday.goodneighbor.discount.DiscountListView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class DiscountsActivity extends AppCompatActivity {
     //LIST OF ARRAY STRINGS WHICH WILL SERVE AS LIST ITEMS
@@ -21,10 +27,12 @@ public class DiscountsActivity extends AppCompatActivity {
     DiscountArrayAdapter adapter;
     ListView listView;
 
+    DiscountListView displayListView  = new DiscountListView();
+    List<DiscountDisplay> displayInfoList = displayListView.createDiscountListInfo();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        String[] mobileArray = {"Android","IPhone","WindowsMobile","Blackberry","WebOS","Ubuntu","Windows7","Max OS X"};
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_discounts);
@@ -42,15 +50,26 @@ public class DiscountsActivity extends AppCompatActivity {
             }
         });
 
+
         listItems = new ArrayList<String>();
-        listItems.add("Sudent Loyality Discount");
-        listItems.add("Priority Discount");
-        listItems.add("Another Type of Discount");
-        listItems.add("Another Type of Discount");
-        listItems.add("Another Type of Discount");
-        adapter = new DiscountArrayAdapter(this, R.layout.content_discounts, listItems);
+        Map<Integer, Drawable> imageStrings = new HashMap<>();
+
+        int i = 0;
+        for (DiscountDisplay discountDisplay : displayInfoList){
+            listItems.add(discountDisplay.getPrompt());
+            if (discountDisplay.getIcon() == 2){
+                imageStrings.put(i, getResources().getDrawable(R.drawable.checkmark));
+            } else if (discountDisplay.getIcon() == 1){
+                imageStrings.put(i, getResources().getDrawable(R.drawable.exclamationpoint));
+            }
+            i++;
+        }
+
+
+        adapter = new DiscountArrayAdapter(this, R.layout.content_discounts, listItems, imageStrings);
         listView = (ListView) findViewById(R.id.mobile_list);
         listView.setAdapter(adapter);
     }
+
 
 }
