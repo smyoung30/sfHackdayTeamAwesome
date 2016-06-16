@@ -1,5 +1,6 @@
 package com.sf.hackday.goodneighbor.activities;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -7,8 +8,11 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import com.sf.hackday.goodneighbor.adapter.DiscountArrayAdapter;
+
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.sf.hackday.goodneighbor.R;
@@ -70,6 +74,19 @@ public class DiscountsActivity extends AppCompatActivity {
         adapter = new DiscountArrayAdapter(this, R.layout.content_discounts, listItems, imageStrings);
         listView = (ListView) findViewById(R.id.mobile_list);
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String item = (String) adapter.getItem(position);
+                Intent intent = new Intent(getApplicationContext(),DiscountDetailsActivity.class)
+                        .putExtra("discountName", item);
+//based on item add info to intent
+                startActivity(intent);
+            }
+        });
     }
 
 

@@ -1,5 +1,6 @@
 package com.sf.hackday.goodneighbor.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -20,6 +21,9 @@ public class DiscountDetailsActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         TextView discountDesc = (TextView) findViewById(R.id.discountDesc);
+        TextView discountName = (TextView) findViewById(R.id.discountName);
+        Intent intent = getIntent();
+        discountName.setText(intent.getStringExtra("discountName"));
         discountDesc.setText("There are many variations of passages of Lorem " +
                         "Ipsum available but the majority have suffered " +
                         "alteration in some form by injected humour " +
