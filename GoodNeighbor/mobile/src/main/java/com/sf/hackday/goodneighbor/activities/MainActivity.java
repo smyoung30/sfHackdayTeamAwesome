@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-
         listener = GoodNeighborPresenter.getInstance();
     }
 

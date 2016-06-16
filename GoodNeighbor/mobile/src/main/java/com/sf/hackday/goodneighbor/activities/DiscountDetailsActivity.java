@@ -18,6 +18,7 @@ public class DiscountDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_discount_details);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         TextView discountDesc = (TextView) findViewById(R.id.discountDesc);
         discountDesc.setText("There are many variations of passages of Lorem " +
