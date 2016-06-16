@@ -1,5 +1,6 @@
 package com.sf.hackday.goodneighbor.activities;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -41,14 +42,14 @@ public class DiscountsActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
 
 
         listItems = new ArrayList<String>();
@@ -69,6 +70,12 @@ public class DiscountsActivity extends AppCompatActivity {
         adapter = new DiscountArrayAdapter(this, R.layout.content_discounts, listItems, imageStrings);
         listView = (ListView) findViewById(R.id.mobile_list);
         listView.setAdapter(adapter);
+    }
+
+
+    public void gotoDiscountDetailsActivity(View v) {
+        Intent intent2 = new Intent(this, DiscountDetailsActivity.class);
+        startActivity(intent2);
     }
 
 

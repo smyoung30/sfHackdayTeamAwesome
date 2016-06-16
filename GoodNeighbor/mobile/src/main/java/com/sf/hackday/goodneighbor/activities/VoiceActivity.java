@@ -8,6 +8,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -53,6 +54,7 @@ public class VoiceActivity extends AppCompatActivity {
     {
         if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
             results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+
 
             if (results.get(0) != null) { //results.get(0).equals("like a good neighbor statefarm is there") is the actual call, we opted to not use it because interference would skew voice data.
                 gotoMainActivity();

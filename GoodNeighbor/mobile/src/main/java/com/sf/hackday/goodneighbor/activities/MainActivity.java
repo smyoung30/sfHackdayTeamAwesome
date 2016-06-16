@@ -34,15 +34,15 @@ public class MainActivity extends AppCompatActivity {
         //getSupportActionBar().setDisplayShowHomeEnabled(true);
         //getSupportActionBar().setIcon(R.drawable.logo);
         //getSupportActionBar().setDisplayUseLogoEnabled(true);
+//       FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
 
-       FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
         listener = GoodNeighborPresenter.getInstance();
     }
 
@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
      * @param v view
      */
     public void gotoRegisterActivity(View v) {
-        Intent intent2 = new Intent(this, DashboardActivity.class);
+        Intent intent2 = new Intent(this, LoginActivity.class);
         startActivity(intent2);
     }
 
