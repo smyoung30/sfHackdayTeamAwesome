@@ -7,6 +7,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import com.sf.hackday.goodneighbor.adapter.DiscountArrayAdapter;
 import android.widget.ListView;
@@ -39,7 +41,6 @@ public class DiscountsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_discounts);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -70,6 +71,31 @@ public class DiscountsActivity extends AppCompatActivity {
         adapter = new DiscountArrayAdapter(this, R.layout.content_discounts, listItems, imageStrings);
         listView = (ListView) findViewById(R.id.mobile_list);
         listView.setAdapter(adapter);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent;
+        switch (item.getItemId()) {
+
+            case R.id.action_settings:
+                intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.action_home:
+                intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+                break;
+
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
     }
 
 
