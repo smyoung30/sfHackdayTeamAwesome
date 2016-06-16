@@ -1,5 +1,6 @@
 package com.sf.hackday.goodneighbor.activities;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.speech.RecognizerIntent;
 import android.support.design.widget.FloatingActionButton;
@@ -80,6 +81,11 @@ public class VoiceActivity extends AppCompatActivity {
 
             case R.id.action_home:
                 intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.action_details:
+                intent = new Intent(this, DiscountDetailsActivity.class);
                 startActivity(intent);
                 break;
 
