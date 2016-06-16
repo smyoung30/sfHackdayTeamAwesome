@@ -5,21 +5,49 @@ package com.sf.hackday.goodneighbor.discount;
  */
 public class DiscountDisplay {
 
-    Discount discount;
-    Discount discount2;
-    DisplayIcon icon;
 
-    public Discount getDiscount() {
-        return discount;
-    }
-    public void setIcon(DisplayIcon icon) {
+    private int icon;
+    private String prompt;
+
+    public DiscountDisplay(int icon, String prompt) {
         this.icon = icon;
-    }
-    public void setDiscount(Discount discount) {
-        this.discount = discount;
+        this.prompt = prompt;
     }
 
-    public DisplayIcon getIcon() {
+    public int getIcon() {
         return icon;
     }
+
+    public void setIcon(int icon) {
+        this.icon = icon;
+    }
+
+    public String getPrompt() {
+        return prompt;
+    }
+
+    public void setPrompt(String prompt) {
+        this.prompt = prompt;
+    }
+
+    //    Discount discount;
+//    DisplayIcon icon;
+//
+//    public DiscountDisplay(Discount discount, DisplayIcon icon) {
+//        this.discount = discount;
+//        this.icon = icon;
+//    }
+//
+//    public Discount getDiscount() {
+//        return discount;
+//    }
+//    public void setIcon(DisplayIcon icon) {
+//        this.icon = icon;
+//    }
+//    public void setDiscount(Discount discount) {
+//        this.discount = discount;
+//    }
+//    public DisplayIcon getIcon() {
+//        return icon;
+//    }
 }
