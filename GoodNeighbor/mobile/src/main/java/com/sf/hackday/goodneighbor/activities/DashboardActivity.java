@@ -30,6 +30,7 @@ public class DashboardActivity extends AppCompatActivity {
         listener = GoodNeighborPresenter.getInstance();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
 
     @Override
