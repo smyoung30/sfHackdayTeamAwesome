@@ -13,30 +13,40 @@
     tools:showIn="@layout/activity_main">
 
     <TextView
+        android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/welcome"
-        android:layout_centerHorizontal="true"></TextView>
-
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="@dimen/header"
+        android:textSize="28sp"
+        android:text="@string/welcome" />
 
     <LinearLayout
+        android:id="@+id/loginLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingTop="76dp"
         android:gravity="center_horizontal"
-        android:layout_marginTop="20dp">
+        android:orientation="vertical"
+        android:layout_below="@+id/welcome">
 
         <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
+            android:id="@+id/login"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="gotoLoginActivity"
-            android:text="@string/login" />
+            android:text="@string/login"
+            android:background="@color/white"
+            android:textColor="@color/colorPrimary"/>
 
         <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
+            android:id="@+id/register"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:onClick="gotoRegisterActivity"
+            android:background="@color/white"
+            android:textColor="@color/colorPrimary"
             android:text="@string/register" />
 
     </LinearLayout>
