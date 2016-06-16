@@ -4,7 +4,7 @@
     <string name="title_activity_welcome">GoodNeighbor</string>
     <string name="action_home">Go Home</string>
     <string name="action_settings">Contact your Agent!</string>
-    <string name="welcome">Welcome to the GoodNeighbor app!</string>
+    <string name="welcome">Welcome GoodNeighbor!</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
     <string name="logo">State Farm</string>
