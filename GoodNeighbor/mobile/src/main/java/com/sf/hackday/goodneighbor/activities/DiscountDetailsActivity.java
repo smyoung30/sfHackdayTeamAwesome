@@ -24,6 +24,9 @@ public class DiscountDetailsActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         TextView discountDesc = (TextView) findViewById(R.id.discountDesc);
+        TextView discountName = (TextView) findViewById(R.id.discountName);
+        Intent intent = getIntent();
+        discountName.setText(intent.getStringExtra("discountName"));
         discountDesc.setText("There are many variations of passages of Lorem " +
                         "Ipsum available but the majority have suffered " +
                         "alteration in some form by injected humour " +

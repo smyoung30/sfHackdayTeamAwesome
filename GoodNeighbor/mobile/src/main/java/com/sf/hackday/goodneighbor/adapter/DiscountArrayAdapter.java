@@ -2,6 +2,7 @@ package com.sf.hackday.goodneighbor.adapter;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ import java.util.Map;
  */
 public class DiscountArrayAdapter extends ArrayAdapter<String> {
 
+
     private static final String TAG = "DiscountArrayAdapter";
     ArrayList<String> title;
     Map<Integer, Drawable> images;
@@ -31,6 +33,11 @@ public class DiscountArrayAdapter extends ArrayAdapter<String> {
         super(context, layoutId, discounts);
         this.title = discounts;
         this.images = images;
+    }
+
+    @Override
+    public String getItem(int position) {
+        return title.get(position);
     }
 
     @Override
