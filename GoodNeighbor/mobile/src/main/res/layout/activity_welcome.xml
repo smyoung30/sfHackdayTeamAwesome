@@ -29,20 +29,23 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:gravity="center_horizontal">
+        android:layout_height="match_parent"
+        android:paddingTop="76dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/button1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="gotoLoginActivity"
             android:text="@string/login" />
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:onClick="gotoRegisterActivity" 
             android:text="@string/register" />
 
