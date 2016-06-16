@@ -68,6 +68,15 @@
             android:text="Maps"
             android:background="@color/white"
             android:textColor="@color/colorPrimary"/>
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="gotoChatActivity"
+            android:layout_marginTop="8dp"
+            android:text="Chat"
+            android:background="@color/white"
+            android:textColor="@color/colorPrimary"/>
 
     </LinearLayout>
 
