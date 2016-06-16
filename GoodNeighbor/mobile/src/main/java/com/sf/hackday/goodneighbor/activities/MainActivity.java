@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     public void showNotification(View v)
     {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
-        builder.setSmallIcon(R.drawable.khakis_clipart);
+        builder.setSmallIcon(R.drawable.logo_small);
         builder.setContentTitle("My Notification");
         builder.setContentText("This is my fancy Notification!!");
         Intent intent = new Intent(this, NotificationClass.class);
