@@ -23,12 +23,14 @@ public class DiscountListView extends ListActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
-        String[] mobileArray = {"Android","IPhone","WindowsMobile","Blackberry","WebOS","Ubuntu","Windows7","Max OS X"};
+//        String[] mobileArray = {"Android","IPhone","WindowsMobile","Blackberry","WebOS","Ubuntu","Windows7","Max OS X"};
 
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.content_discounts);
 //        ArrayAdapter adapter2 =
-        ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.content_discounts, R.id.labelDiscount, mobileArray);
+        listItems.add("Hello");
+        listItems.add("goodbe");
+        ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.content_discounts, R.id.labelDiscount, listItems);
 
         ListView listView = (ListView) findViewById(R.id.mobile_list);
         listView.setAdapter(adapter);
