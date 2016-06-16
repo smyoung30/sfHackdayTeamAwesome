@@ -43,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Discount Discription"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:layout_marginTop="16dp"
                 android:layout_below="@+id/discountName"
                 />
@@ -55,7 +55,7 @@
         android:id="@+id/card_view_discount_bottom"
         android:layout_gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="300dp"
         card_view:cardCornerRadius="6dp"
         android:layout_below="@id/card_view_discount_top"
         card_view:contentPaddingLeft="20dp"
@@ -76,7 +76,7 @@
             android:text="Discount Checklist"
             android:layout_marginTop="16dp"
             android:layout_marginLeft="72dp"
-            android:textSize="17sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:layout_below="@+id/card_view"/>
 
@@ -97,7 +97,7 @@
                 android:id="@+id/discountItem1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
+                android:textSize="16sp"
                 android:text="No claims for the past 12 months"/>
         </LinearLayout>
 
@@ -118,7 +118,7 @@
                 android:id="@+id/discountItem2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
+                android:textSize="16sp"
                 android:text="Remain in the same city since starting the policy"/>
         </LinearLayout>
 
@@ -139,7 +139,7 @@
                 android:id="@+id/discountItem3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="13sp"
+                android:textSize="16sp"
                 android:text="Take out $50 for your new born child every year for the next 10 years"/>
         </LinearLayout>
         </LinearLayout>

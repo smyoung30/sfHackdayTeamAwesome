@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">GoodNeighbor</string>
+    <string name="app_name">Good Neighbor</string>
     <string name="title_activity_maps">Map</string>
-    <string name="title_activity_welcome">GoodNeighbor</string>
+    <string name="title_activity_welcome">Good Neighbor</string>
     <string name="action_home">Go Home</string>
     <string name="action_settings">Contact your Agent!</string>
-    <string name="welcome">Welcome GoodNeighbor!</string>
+    <string name="welcome">Welcome Good Neighbor!</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
     <string name="logo">State Farm</string>
-    <string name="title_activity_discount_details">DiscountDetails</string>
+    <string name="title_activity_discount_details">Discount Details</string>
 </resources>

@@ -33,31 +33,41 @@
     </android.support.design.widget.AppBarLayout>
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/dashboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|center_horizontal"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/header"
+        android:textSize="28sp"
         android:text="Dashboard" />
 
     <LinearLayout
+        android:id="@+id/loginLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
+        android:layout_height="match_parent"
+        android:paddingTop="76dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_below="@+id/dashboard">
 
         <Button
             android:id="@+id/button1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="gotoDiscountsActivity"
-            android:text="Policy" />
+            android:text="Discounts"
+            android:background="@color/white"
+            android:textColor="@color/colorPrimary"/>
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="gotoMapsActivity"
-            android:text="Maps" />
+            android:layout_marginTop="8dp"
+            android:text="Maps"
+            android:background="@color/white"
+            android:textColor="@color/colorPrimary"/>
 
     </LinearLayout>
 
