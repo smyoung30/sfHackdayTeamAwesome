@@ -43,6 +43,16 @@
         <activity android:name=".activities.PolicyActivity"></activity>
         <activity android:name=".activities.LoginActivity" android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".activities.DashboardActivity"></activity>
+
+        <activity
+            android:name=".NotificationClass"
+            android:label="@string/title_activity_welcome">
+            <intent-filter>
+                <action android:name="second_filter" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
