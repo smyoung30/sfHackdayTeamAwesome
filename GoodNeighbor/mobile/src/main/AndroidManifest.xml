@@ -51,7 +51,10 @@
             android:name=".activities.DiscountsActivity"
             android:label="Discounts"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.DiscountDetailsActivity"
+            android:label="@string/title_activity_discount_details"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
-
 
 </manifest>
